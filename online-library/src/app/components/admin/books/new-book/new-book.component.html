@@ -1,0 +1,16 @@
+<mat-card class="mat-elevation-z1">
+    <form action="" [formGroup]="booksForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Book Name</mat-label>
+            <input matInput placeholder="Book Name" formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Author</mat-label>
+            <input matInput placeholder="Author" formControlName="author">
+        </mat-form-field>
+       <br>
+        <button type="button" mat-raised-button color="accent" [routerLink]="['/admin/books']"
+            routerLinkActive="router-link-active">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" mat-raised-button color="primary" (click)="onSubmit()">Save</button>
+    </form>
+</mat-card>
